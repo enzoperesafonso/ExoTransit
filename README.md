@@ -2,7 +2,7 @@
 
 Generates dark-mode animations of exoplanet transits with optional embedded sonification (audio representation of flux), configured via a YAML file.
 
-![Animation of uniform brightness star transit](https://raw.githubusercontent.com/enzoperesafonso/exotransit_sonification/main/transit_animation_none_dark_sound.gif)
+![Animation of uniform brightness star transit](https://raw.githubusercontent.com/enzoperesafonso/exotransit_sonification/main/transit_animation_spots_dark_sound.gif)
 
 ## Features
 
