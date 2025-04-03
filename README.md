@@ -2,8 +2,8 @@
 
 Generate dark-mode animations of exoplanet transits with embedded sonification (audio representation of flux), primarily designed as an outreach tool for the blind and visually impaired community.
 
-![Example animation of a limb-darkened transit](https://raw.githubusercontent.com/enzoperesafonso/exoTransit/blob/main/transit_animation_spots_dark_sound.gif)
-*(GIF shows a limb-darkened transit animation)*
+(https://raw.githubusercontent.com/enzoperesafonso/exoTransit/transit_animation_spots_dark_sound.gif)
+
 
 ## Overview
 
