@@ -34,7 +34,7 @@ A key feature is the **sonification** of the transit light curve. The changing b
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/enzoperesafonso/exotransit_sonification.git # Use your actual repo URL!
+    git clone https://github.com/enzoperesafonso/ExoTransit.git # Use your actual repo URL!
     cd exotransit_sonification
     ```
 
