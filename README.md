@@ -2,7 +2,7 @@
 
 Generates dark-mode animations of exoplanet transits with optional embedded sonification (audio representation of flux), configured via a YAML file.
 
-(https://github.com/enzoperesafonso/exotransit_sonification/blob/main/transit_animation_none_dark_sound.gif)
+(https://raw.githubusercontent.com/enzoperesafonso/exotransit_sonification/blob/main/transit_animation_none_dark_sound.gif)
 
 ## Features
 
