@@ -1,0 +1,69 @@
+# Configuration for Transit Animation Script
+
+# === System Parameters (passed to batman) ===
+system_params:
+  t0: 0.0         # Time of inferior conjunction [days]
+  per: 3.5        # Orbital period [days]
+  rp: 0.1        # Planet radius [stellar radii]
+  a: 8.8          # Semi-major axis [stellar radii]
+  inc: 88.5       # Orbital inclination [degrees]
+  ecc: 0.0        # Eccentricity
+  w: 90.0         # Longitude of periastron [degrees]
+  # Limb darkening law ('uniform', 'linear', 'quadratic', 'nonlinear', etc.)
+  limb_dark: quadratic
+  # Limb darkening coefficients (list, number depends on limb_dark)
+  # For quadratic: [u1, u2]
+  u: [0.4, 0.2]
+
+# === Star Parameters ===
+star_params:
+  r_star: 1.0     # Stellar radius (used for scaling, often 1.0) [stellar radii]
+  p_rot_days: 25.0 # Stellar rotation period [days] (for spots)
+
+# === Spots Configuration (only used if scenario='spots') ===
+# List of spot dictionaries. Leave empty or omit if no spots needed.
+spots:
+  - lon: 30       # Longitude [degrees]
+    lat: 15       # Latitude [degrees]
+    radius: 0.08  # Spot radius [stellar radii]
+    contrast: 0.7 # Spot contrast (0=black, 1=same as surrounding star surface)
+  - lon: -45
+    lat: -25
+    radius: 0.06
+    contrast: 0.65
+  # - lon: 90
+  #   lat: 0
+  #   radius: 0.07
+  #   contrast: 0.75
+
+# === Animation Settings ===
+animation_settings:
+  # Base name for output file. '{scenario}' will be replaced.
+  output_basename: "transit_animation_{scenario}_dark_sound"
+  video_fps: 30   # Frames per second for video output
+  num_frames: 500 # Number of frames in the animation
+  dpi: 200        # Dots per inch for saved video quality
+
+# === Sonification Settings (if sound enabled) ===
+sonification_settings:
+  sample_rate: 44100    # Audio sample rate [Hz]
+  base_freq: 220.0      # Frequency for baseline flux (1.0) [Hz]
+  max_freq_shift: 660.0 # Max frequency change relative to base [Hz]
+  amplitude: 0.3        # Audio amplitude [0-1]
+
+# === FFmpeg Settings (for merging audio/video) ===
+ffmpeg_settings:
+  video_bitrate: 3000   # Video bitrate for ffmpeg writer [kbps]
+  audio_codec: aac      # Audio codec for final file (e.g., aac, mp3)
+  audio_bitrate: 192k   # Audio bitrate string (e.g., 192k, 128k)
+
+# === Visual Settings (Dark Mode Colors - Optional) ===
+# If this section is omitted, the script defaults will be used.
+visual_settings:
+  dark_colormap: 'inferno'
+  line_color: 'cyan'
+  marker_color: 'yellow'
+  text_color: 'white'
+  grid_color: 'grey'
+  fig_bg_color: '#1c1c1c'
+  planet_color: 'black'

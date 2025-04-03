@@ -80,13 +80,13 @@ Execute the script from your terminal (within the activated virtual environment 
 
 ```bash
 # Generate Limb Darkening scenario using defaults from config.yaml
-python transit_anim_config.py ld
+python exotransit.py ld
 
 # Generate Spots scenario
-python transit_anim_config.py spots
+python exotransit.py spots
 
 # Generate No Limb Darkening scenario
-python transit_anim_config.py none
+python exotransit.py none
 ```
 *Output video will be named according to `output_basename` in `config.yaml` (e.g., `transit_animation_ld_dark_sound.mp4`).*
 
@@ -94,16 +94,16 @@ python transit_anim_config.py none
 
 ```bash
 # Use a specific configuration file
-python transit_anim_config.py ld --config my_custom_config.yaml
+python exotransit.py ld --config my_custom_config.yaml
 
 # Override the output filename
-python transit_anim_config.py spots --outfile custom_transit_with_spots.mp4
+python exotransit.py spots --outfile custom_transit_with_spots.mp4
 
 # Disable sound generation/embedding for this specific run
-python transit_anim_config.py ld --nosound
+python exotransit.py ld --nosound
 
 # Combine options
-python transit_anim_config.py spots --config big_planet.yaml --outfile big_planet_transit.mp4 --nosound
+python exotransit.py spots --config big_planet.yaml --outfile big_planet_transit.mp4 --nosound
 ```
 
 ## Output
